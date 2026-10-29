@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d2544">
+  <title>Dela Marta Pinturas — Site provisório</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="topstripe"></div>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header>
+    <div class="wrap header-inner">
+      <a href="#inicio" class="brand" aria-label="Dela Marta Pinturas — início">
+        <img src="img/logo.png" alt="">
+        <span><strong>Dela Marta</strong><small>PINTURAS</small></span>
+      </a>
+
+      <button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="navigation">☰</button>
+
+      <nav id="navigation" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a href="#contato" class="nav-btn">Solicitar orçamento ↗</a>
+    </div>
+  </header>
+
+  <div class="draft">Versão provisória 01</div>
+
+  <main id="inicio">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <div class="tag">Dela Marta Pinturas</div>
+          <h1>Seu espaço merece <span>uma nova cor.</span></h1>
+          <p class="intro">Transformamos ambientes com pintura, capricho e atenção aos detalhes. Conheça nossos serviços e conte como podemos renovar seu espaço.</p>
+
+          <div class="actions">
+            <a href="#contato" class="action primary">Solicitar orçamento ↗</a>
+            <a href="#trabalhos" class="action outline">Conhecer os trabalhos →</a>
+          </div>
+
+          <div class="checks">
+            <span>Pintura interna</span>
+            <span>Fachadas</span>
+            <span>Acabamentos</span>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="hero-art-inner">
+            <img src="img/logo.png" class="hero-logo" alt="Logo da Dela Marta Pinturas com rolo de pintura e casa">
+            <div class="hero-wordmark">
+              <strong>Dela Marta</strong>
+              <small>PINTURAS</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BENEFÍCIOS ================= -->
+    <div class="benefits">
+      <div class="wrap">
+        <div class="benefit">
+          <span class="bubble">⌂</span>
+          <div><strong>Residencial</strong><small>Renovação da sua casa</small></div>
+        </div>
+        <div class="benefit">
+          <span class="bubble">▤</span>
+          <div><strong>Comercial</strong><small>Ambientes para seu negócio</small></div>
+        </div>
+        <div class="benefit">
+          <span class="bubble">✧</span>
+          <div><strong>Acabamentos</strong><small>Detalhes que fazem diferença</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SERVIÇOS ================= -->
+    <section class="content" id="servicos">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">O que fazemos</div>
+          <h2>Serviços de pintura</h2>
+          <p class="desc">Tudo que seu cliente precisa conhecer sobre os serviços oferecidos pela Dela Marta Pinturas. Podemos ajustar essa lista.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service">
+            <div class="emoji">⌂</div>
+            <h3>Pintura interna</h3>
+            <p>Renovação de salas, quartos, cozinhas e outros ambientes internos.</p>
+            <div class="line"></div>
+          </article>
+
+          <article class="service">
+            <div class="emoji">▥</div>
+            <h3>Pintura externa</h3>
+            <p>Pintura de fachadas, muros e superfícies externas.</p>
+            <div class="line"></div>
+          </article>
+
+          <article class="service">
+            <div class="emoji">▤</div>
+            <h3>Pintura comercial</h3>
+            <p>Novas cores para lojas, escritórios e espaços comerciais.</p>
+            <div class="line"></div>
+          </article>
+
+          <article class="service">
+            <div class="emoji">✧</div>
+            <h3>Acabamentos</h3>
+            <p>Preparação das superfícies, retoques e atenção aos detalhes.</p>
+            <div class="line"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PORTFÓLIO ================= -->
+    <section class="content soft" id="trabalhos">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Portfólio</div>
+          <h2>Veja nossas transformações</h2>
+          <p class="desc">Aqui ficarão as fotos reais dos projetos. Estas imagens são apenas ilustrações para mostrar como a galeria funcionará.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrar trabalhos">
+          <button class="filter selected" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter" data-filter="interna" aria-pressed="false">Pintura interna</button>
+          <button class="filter" data-filter="externa" aria-pressed="false">Pintura externa</button>
+          <button class="filter" data-filter="acabamento" aria-pressed="false">Acabamentos</button>
+        </div>
+
+        <div class="gallery">
+          <article class="project" data-type="interna">
+            <div class="scene one">
+              <div class="wall"></div>
+              <div class="window"></div>
+              <div class="floor"></div>
+              <div class="sofa"></div>
+              <div class="stamp">Imagem ilustrativa</div>
+            </div>
+            <div class="project-body">
+              <h3>Sala renovada</h3>
+              <p>Pintura interna · Espaço para foto real</p>
+            </div>
+          </article>
+
+          <article class="project" data-type="externa">
+            <div class="scene two">
+              <div class="wall"></div>
+              <div class="window"></div>
+              <div class="floor"></div>
+              <div class="sofa"></div>
+              <div class="stamp">Imagem ilustrativa</div>
+            </div>
+            <div class="project-body">
+              <h3>Ambientes revitalizados</h3>
+              <p>Pintura externa · Espaço para foto real</p>
+            </div>
+          </article>
+
+          <article class="project" data-type="acabamento">
+            <div class="scene three">
+              <div class="wall"></div>
+              <div class="window"></div>
+              <div class="floor"></div>
+              <div class="sofa"></div>
+              <div class="stamp">Imagem ilustrativa</div>
+            </div>
+            <div class="project-body">
+              <h3>Acabamento decorativo</h3>
+              <p>Detalhes · Espaço para foto real</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="gallery-note">Quando você enviar fotos de antes e depois, substituímos os exemplos pelas obras reais.</p>
+      </div>
+    </section>
+
+    <!-- ================= COMO FUNCIONA ================= -->
+    <section class="content" id="processo">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Simples e direto</div>
+          <h2>Como funciona?</h2>
+          <p class="desc">O cliente encontra seus serviços e consegue iniciar um pedido de orçamento.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Conte sua ideia</h3>
+            <p>Descreva o ambiente e o tipo de pintura que deseja realizar.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Converse sobre o projeto</h3>
+            <p>A empresa avalia as informações e combina os detalhes para orçamento.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Agende o serviço</h3>
+            <p>Depois de alinhar valores e condições, vocês combinam a execução.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO / ORÇAMENTO ================= -->
+    <section class="contact" id="contato">
+      <div class="wrap contact-grid">
+        <div>
+          <div class="eyebrow">Contato e orçamento</div>
+          <h2>Vamos dar uma nova cor ao seu ambiente?</h2>
+          <p class="desc">Conte o que deseja pintar e prepare uma mensagem para a equipe da Dela Marta Pinturas. Em breve, podemos conectar diretamente ao WhatsApp da empresa.</p>
+
+          <div class="perks">
+            <div><span>✓</span> Solicitação personalizada</div>
+            <div><span>✓</span> Orçamento de acordo com o projeto</div>
+            <div><span>✓</span> Instagram e WhatsApp a configurar</div>
+          </div>
+        </div>
+
+        <form id="quoteForm" class="form-box">
+          <h3>Solicite um orçamento</h3>
+          <p class="hint">Preencha os dados para preparar uma mensagem.</p>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Seu nome *</label>
+              <input type="text" id="name" placeholder="Como podemos chamar você?" maxlength="100" required>
+            </div>
+            <div class="field">
+              <label for="city">Cidade / bairro</label>
+              <input type="text" id="city" placeholder="Local do serviço" maxlength="120">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="service">Tipo de serviço *</label>
+            <select id="service" required>
+              <option value="">Selecione</option>
+              <option>Pintura interna</option>
+              <option>Pintura externa</option>
+              <option>Pintura comercial</option>
+              <option>Acabamentos e retoques</option>
+              <option>Outro serviço</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="details">Detalhes do projeto</label>
+            <textarea id="details" placeholder="Ex.: Quero pintar dois quartos e a sala..." maxlength="1000"></textarea>
+          </div>
+
+          <button class="form-button" type="submit">Preparar mensagem de orçamento ↗</button>
+          <p class="fine">Versão de demonstração: nada é enviado ou armazenado.</p>
+
+          <!-- Aparece depois que o formulário é enviado -->
+          <div class="generated" id="generated" aria-live="polite">
+            <strong>Mensagem preparada:</strong>
+            <textarea id="messagePreview" readonly aria-label="Mensagem de orçamento"></textarea>
+            <button type="button" class="copy" id="copy">Copiar mensagem</button>
+            <p class="fine">Adicionaremos o número real do WhatsApp para permitir o envio direto.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong>Dela Marta Pinturas</strong>
+        <small>Uma nova cor para cada ambiente.</small>
+      </div>
+      <small>Versão provisória, ainda não publicada. <a href="#inicio">Voltar ao início ↑</a></small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
