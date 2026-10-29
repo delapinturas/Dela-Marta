@@ -4,8 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d2544">
-  <title>Dela Marta Pinturas — Site provisório</title>
-  <link rel="icon" href="img/favicon.png">
+  <title>Dela Marta Pinturas — Pintura residencial e comercial</title>
+  <meta name="description" content="Dela Marta Pinturas: pintura interna, externa e comercial com capricho e atenção aos detalhes. Solicite seu orçamento pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Dela Marta Pinturas — Seu espaço merece uma nova cor">
+  <meta property="og:description" content="Pintura interna, externa e comercial. Solicite seu orçamento.">
+  <meta property="og:image" content="img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,8 +41,6 @@
       <a href="#contato" class="nav-btn">Solicitar orçamento ↗</a>
     </div>
   </header>
-
-  <div class="draft">Versão provisória 01</div>
 
   <main id="inicio">
 
@@ -94,7 +100,7 @@
         <div class="section-head">
           <div class="eyebrow">O que fazemos</div>
           <h2>Serviços de pintura</h2>
-          <p class="desc">Tudo que seu cliente precisa conhecer sobre os serviços oferecidos pela Dela Marta Pinturas. Podemos ajustar essa lista.</p>
+          <p class="desc">Do preparo da superfície ao acabamento final, cuidamos de cada etapa da sua pintura.</p>
         </div>
 
         <div class="service-grid">
@@ -135,7 +141,7 @@
         <div class="section-head">
           <div class="eyebrow">Portfólio</div>
           <h2>Veja nossas transformações</h2>
-          <p class="desc">Aqui ficarão as fotos reais dos projetos. Estas imagens são apenas ilustrações para mostrar como a galeria funcionará.</p>
+          <p class="desc" id="galleryDesc">Veja o resultado de alguns dos nossos trabalhos.</p>
         </div>
 
         <div class="filters" role="group" aria-label="Filtrar trabalhos">
@@ -145,7 +151,7 @@
           <button class="filter" data-filter="acabamento" aria-pressed="false">Acabamentos</button>
         </div>
 
-        <div class="gallery">
+        <div class="gallery" id="gallery">
           <article class="project" data-type="interna">
             <div class="scene one">
               <div class="wall"></div>
@@ -189,7 +195,7 @@
           </article>
         </div>
 
-        <p class="gallery-note">Quando você enviar fotos de antes e depois, substituímos os exemplos pelas obras reais.</p>
+        <p class="gallery-note" id="galleryNote" hidden>As imagens acima são ilustrações. Em breve, fotos reais dos nossos trabalhos.</p>
       </div>
     </section>
 
@@ -199,7 +205,7 @@
         <div class="section-head">
           <div class="eyebrow">Simples e direto</div>
           <h2>Como funciona?</h2>
-          <p class="desc">O cliente encontra seus serviços e consegue iniciar um pedido de orçamento.</p>
+          <p class="desc">Em três passos simples você pede seu orçamento.</p>
         </div>
 
         <div class="steps">
@@ -211,12 +217,12 @@
           <div class="step">
             <div class="step-number">02</div>
             <h3>Converse sobre o projeto</h3>
-            <p>A empresa avalia as informações e combina os detalhes para orçamento.</p>
+            <p>Avaliamos as informações e combinamos os detalhes do orçamento.</p>
           </div>
           <div class="step">
             <div class="step-number">03</div>
             <h3>Agende o serviço</h3>
-            <p>Depois de alinhar valores e condições, vocês combinam a execução.</p>
+            <p>Depois de alinhar valores e condições, combinamos a execução.</p>
           </div>
         </div>
       </div>
@@ -228,18 +234,19 @@
         <div>
           <div class="eyebrow">Contato e orçamento</div>
           <h2>Vamos dar uma nova cor ao seu ambiente?</h2>
-          <p class="desc">Conte o que deseja pintar e prepare uma mensagem para a equipe da Dela Marta Pinturas. Em breve, podemos conectar diretamente ao WhatsApp da empresa.</p>
+          <p class="desc">Conte o que deseja pintar e envie a mensagem direto para a equipe da Dela Marta Pinturas.</p>
 
           <div class="perks">
             <div><span>✓</span> Solicitação personalizada</div>
             <div><span>✓</span> Orçamento de acordo com o projeto</div>
-            <div><span>✓</span> Instagram e WhatsApp a configurar</div>
           </div>
+
+          <div class="contact-links" id="contactLinks"></div>
         </div>
 
         <form id="quoteForm" class="form-box">
           <h3>Solicite um orçamento</h3>
-          <p class="hint">Preencha os dados para preparar uma mensagem.</p>
+          <p class="hint">Preencha os dados e envie pelo WhatsApp.</p>
 
           <div class="form-row">
             <div class="field">
@@ -269,15 +276,15 @@
             <textarea id="details" placeholder="Ex.: Quero pintar dois quartos e a sala..." maxlength="1000"></textarea>
           </div>
 
-          <button class="form-button" type="submit">Preparar mensagem de orçamento ↗</button>
-          <p class="fine">Versão de demonstração: nada é enviado ou armazenado.</p>
+          <button class="form-button" type="submit" id="submitBtn">Enviar pelo WhatsApp ↗</button>
+          <p class="fine">Ao enviar, abrimos o WhatsApp com a mensagem pronta. Nada é armazenado no site.</p>
 
           <!-- Aparece depois que o formulário é enviado -->
           <div class="generated" id="generated" aria-live="polite">
-            <strong>Mensagem preparada:</strong>
+            <strong id="generatedTitle">Mensagem preparada:</strong>
             <textarea id="messagePreview" readonly aria-label="Mensagem de orçamento"></textarea>
             <button type="button" class="copy" id="copy">Copiar mensagem</button>
-            <p class="fine">Adicionaremos o número real do WhatsApp para permitir o envio direto.</p>
+            <p class="fine" id="generatedNote"></p>
           </div>
         </form>
       </div>
@@ -292,10 +299,11 @@
         <strong>Dela Marta Pinturas</strong>
         <small>Uma nova cor para cada ambiente.</small>
       </div>
-      <small>Versão provisória, ainda não publicada. <a href="#inicio">Voltar ao início ↑</a></small>
+      <small>© <span id="year">2026</span> Dela Marta Pinturas. <a href="#inicio">Voltar ao início ↑</a></small>
     </div>
   </footer>
 
+  <script src="js/config.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
