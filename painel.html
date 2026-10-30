@@ -10,6 +10,7 @@
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pagina.css">
+  <link rel="stylesheet" href="css/agenda.css">
 </head>
 <body hidden>
 
@@ -25,10 +26,63 @@
     </div>
   </header>
 
-  <main class="login-page">
+  <main class="login-page painel-page">
+    <div class="wrap">
+      <div class="tag">Área administrativa</div>
+      <h1 class="painel-titulo">Painel</h1>
+      <p class="painel-desc">Escolha o que deseja acessar.</p>
+
+      <div class="painel-grid">
+        <section class="painel-card agenda-card" aria-label="Agenda">
+          <div class="agenda-cabeca">
+            <div class="painel-icone" aria-hidden="true">📅</div>
+            <h2>Agenda</h2>
+          </div>
+
+          <div class="cal-topo">
+            <button type="button" id="mes-ant" class="cal-nav" aria-label="Mês anterior">←</button>
+            <h3 id="mes-titulo"></h3>
+            <button type="button" id="mes-prox" class="cal-nav" aria-label="Próximo mês">→</button>
+            <button type="button" id="hoje" class="cal-hoje">Hoje</button>
+          </div>
+          <div class="cal-semana" aria-hidden="true">
+            <span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
+          </div>
+          <div class="cal-dias" id="cal-dias"></div>
+
+          <div class="notas">
+            <h3 id="dia-titulo"></h3>
+            <ul id="lista-notas" class="lista-notas"></ul>
+            <p id="sem-notas" class="sem-notas">Nenhum lembrete neste dia.</p>
+
+            <form id="form-nota" novalidate>
+              <label for="nova-nota">Novo lembrete</label>
+              <input id="nova-nota" type="text" maxlength="200" placeholder="Ex.: Pintura casa da Maria, 8h" autocomplete="off">
+              <button type="submit" class="action primary">Adicionar ↗</button>
+            </form>
+            <p class="aviso-local">Os lembretes ficam salvos só neste navegador.</p>
+          </div>
+        </section>
+
+        <article class="painel-card">
+          <div class="painel-icone" aria-hidden="true">📝</div>
+          <h2>Orçamentos</h2>
+          <p>Criar e acompanhar os orçamentos dos clientes.</p>
+          <span class="painel-breve">Em breve</span>
+        </article>
+
+        <article class="painel-card">
+          <div class="painel-icone" aria-hidden="true">💰</div>
+          <h2>Finanças</h2>
+          <p>Painel com entradas, saídas e resultados.</p>
+          <span class="painel-breve">Em breve</span>
+        </article>
+      </div>
+    </div>
   </main>
 
   <script src="js/auth.js"></script>
+  <script src="js/agenda.js"></script>
   <script src="js/painel.js"></script>
 </body>
 </html>

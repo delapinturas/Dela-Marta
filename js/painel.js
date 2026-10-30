@@ -3,6 +3,7 @@ if (!estaLogado()) {
   location.replace('pagina.html');
 } else {
   document.body.hidden = false;
+  iniciar();
 }
 
 document.getElementById('sair').addEventListener('click', () => {
