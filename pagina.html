@@ -4,29 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; form-action 'none'; base-uri 'none'">
-  <meta name="theme-color" content="#ff963d">
+  <meta name="theme-color" content="#0d2544">
+  <meta name="robots" content="noindex">
   <title>Adm — Dela Marta Pinturas</title>
   <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pagina.css">
 </head>
 <body>
+
   <div class="topstripe"></div>
 
   <header>
     <div class="wrap header-inner">
       <a href="index.html" class="brand" aria-label="Dela Marta Pinturas — início">
-        <span class="logo-box"><img src="img/logo.png" alt=""></span>
+        <img src="img/logo.png" alt="">
         <span><strong>Dela Marta</strong><small>PINTURAS</small></span>
       </a>
-      <a href="index.html" class="btn-inicio">Início →</a>
+      <a href="index.html" class="nav-btn btn-inicio">Início →</a>
     </div>
   </header>
 
-  <main class="conteudo">
-    <section class="card">
-      <div class="tag">Adm</div>
-      <h1>Login</h1>
-    </section>
+  <main class="login-page">
+    <div class="wrap">
+      <section class="login-card">
+        <div class="tag">Adm</div>
+        <h1>Login</h1>
+        <p>Acesse a área administrativa.</p>
+
+        <form id="login-form" novalidate>
+          <label for="usuario">Usuário</label>
+          <input id="usuario" name="usuario" type="text" autocomplete="username" required>
+
+          <label for="senha">Senha</label>
+          <input id="senha" name="senha" type="password" autocomplete="current-password" required>
+
+          <button type="submit" class="action primary">Entrar ↗</button>
+          <p class="login-msg" id="login-msg" role="status"></p>
+        </form>
+      </section>
+    </div>
   </main>
+
+  <script src="js/pagina.js"></script>
 </body>
 </html>
